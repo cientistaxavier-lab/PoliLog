@@ -1,0 +1,2958 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PoliLog</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+
+  <body class="dark-theme-variables">
+    <div id="loginOverlay" class="login-overlay">
+      <div class="login-box" style="position: relative">
+        <div
+          class="theme-toggler login-theme-toggle"
+          style="position: absolute; top: 1.5rem; right: 1.5rem"
+        >
+          <span class="material-symbols-outlined active">wb_sunny</span>
+          <span class="material-symbols-outlined">dark_mode</span>
+        </div>
+
+        <h2><span class="sucess">Poli</span><span class="danger">Log</span></h2>
+        <p>
+          Seja bem-vindo! Faça o login para acessar o painel administrativo.
+        </p>
+
+        <form id="systemLoginForm">
+          <div class="login-field">
+            <label for="inputUser">Usuário</label>
+            <input
+              type="text"
+              id="inputUser"
+              placeholder="admin"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="login-field">
+            <label for="inputPass">Senha</label>
+            <input
+              type="password"
+              id="inputPass"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-submit-btn">
+            Entrar no Sistema
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container hidden-layout">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <h2>
+              <img
+                src="imagens/1.png"
+                class="logo-site"
+                alt="Logo"
+                style="
+                  height: 1.2em;
+                  width: auto;
+                  vertical-align: middle;
+                  margin-right: 8px;
+                  display: inline-block;
+                "
+              /><span class="sucess">Poli</span><span class="danger">Log</span>
+            </h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-symbols-outlined"></span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="#" class="tab-link active" data-target="view-dashboard">
+            <span class="material-symbols-outlined">Dashboard</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-movimentacoes">
+            <span class="material-symbols-outlined"> swap_horiz </span>
+            <h3>Movimentações</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-parceiros">
+            <span class="material-symbols-outlined"> handshake </span>
+            <h3>Parceiros</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-motoristas">
+            <span class="material-symbols-outlined"> id_card </span>
+            <h3>Motorista</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-veiculos">
+            <span class="material-symbols-outlined"> airport_shuttle </span>
+            <h3>Veículos</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-id-veiculos">
+            <span class="material-symbols-outlined"> garage_money </span>
+            <h3>ID. Veículos</h3>
+          </a>
+          <a href="#" class="tab-link" data-target="view-colaboradores">
+            <span class="material-symbols-outlined"> group_add </span>
+            <h3>Colaboradores</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> emergency_home </span>
+            <h3>Ocorrências</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> fact_check </span>
+            <h3>Auditorias</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> Chat </span>
+            <h3>Chat</h3>
+            <span class="Chat">22</span>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> manufacturing </span>
+            <h3>Configurações</h3>
+          </a>
+          <a
+            href="#"
+            onclick="
+              window.location.reload();
+              return false;
+            "
+          >
+            <span class="material-symbols-outlined"> exit_to_app </span>
+            <h3>Sair</h3>
+          </a>
+        </div>
+      </aside>
+
+      <section id="view-dashboard" class="system-view">
+        <main>
+          <button
+            class="menu-desktop-toggle"
+            style="
+              background: transparent;
+              color: var(--color-dark);
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              border: none;
+              outline: none;
+              margin-bottom: 1rem;
+            "
+          >
+            <span class="material-symbols-outlined" style="font-size: 1.8rem"
+              >menu</span
+            >
+          </button>
+
+          <h1>
+            <span class="sucess">Dash</span> <span class="danger">board</span>
+          </h1>
+
+          <div class="date">
+            <input type="date" />
+          </div>
+
+          <div class="insights">
+            <div class="sales">
+              <span class="material-symbols-outlined">show_chart</span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Faturamento</h3>
+                  <h1>25.895,85</h1>
+                </div>
+                <div class="progresso">
+                  <svg>
+                    <circle cx="38" cy="36" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>97%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="text-muted">Últimas 24 horas</small>
+            </div>
+
+            <div class="expenses">
+              <span class="material-symbols-outlined">shuffle</span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Dispesas</h3>
+                  <h1>4.365,55</h1>
+                </div>
+                <div class="progresso">
+                  <svg>
+                    <circle cx="38" cy="36" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>67%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="text-muted">Últimas 24 horas</small>
+            </div>
+
+            <div class="transportation">
+              <span class="material-symbols-outlined"> transportation </span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Em trânsito</h3>
+                  <h1>55</h1>
+                </div>
+                <div class="progresso">
+                  <svg>
+                    <circle cx="38" cy="36" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>57%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="text-muted">Últimas 24 horas</small>
+            </div>
+          </div>
+
+          <div class="recent-onders">
+            <h2>Pedidos recentes</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Motorista</th>
+                  <th>ID do veículo</th>
+                  <th>Ajudante</th>
+                  <th>Status</th>
+                  <th>Rastrear</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#"><span style="color: green">Ronaldinho</span></a>
+                  </td>
+                  <td>ABC-0089</td>
+                  <td>
+                    <a href="#"><span class="danger">Kaká</span></a>
+                  </td>
+                  <td class="sucess">Em trânsito</td>
+                  <td class="primary">
+                    <a href="#" style="color: chartreuse">Localizar</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#" style="color: green">Ronaldo</a></td>
+                  <td>ABC-0071</td>
+                  <td>
+                    <a href="#"><span class="danger">Cafú</span></a>
+                  </td>
+                  <td class="sucess">Em trânsito</td>
+                  <td class="primary">
+                    <a href="#" style="color: chartreuse">Localizar</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"
+                      ><span style="color: green">Roberto Carlos</span></a
+                    >
+                  </td>
+                  <td>ABC-0098</td>
+                  <td>
+                    <a href="#"><span class="danger">Vampeta</span></a>
+                  </td>
+                  <td class="sucess">Em trânsito</td>
+                  <td class="sucess">
+                    <a href="#" style="color: chartreuse">Localizar</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"> <span style="color: green">Rivaldo</span></a>
+                  </td>
+                  <td>ABC-0081</td>
+                  <td>
+                    <a href="#"><span class="danger">Didi</span></a>
+                  </td>
+                  <td class="sucess">Em trânsito</td>
+                  <td class="primary">
+                    <a href="#" style="color: chartreuse">Localizar</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><span style="color: green">Neymar Jr</span></a>
+                  </td>
+                  <td>HXA-2026</td>
+                  <td>
+                    <a href="#"><span class="danger">Vinicius Jr</span></a>
+                  </td>
+                  <td class="warning">Em carregamento</td>
+                  <td class="primary">
+                    <a href="#" style="color: chartreuse">Localizar</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#">Mostrar Tudo</a>
+          </div>
+        </main>
+      </section>
+      <section id="view-id-veiculos" class="system-view hidden-layout">
+        <main>
+          <div
+            class="movimentacoes-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <button
+                class="menu-desktop-toggle"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  border: none;
+                  outline: none;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.8rem"
+                  >menu</span
+                >
+              </button>
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Tipos de Veículo
+                </h1>
+                <small class="text-muted">5 tipos cadastrados</small>
+              </div>
+            </div>
+            <button
+              id="btn-novo-id-veiculo"
+              class="login-submit-btn"
+              style="
+                width: auto;
+                padding: 0.6rem 1.5rem;
+                margin: 0;
+                background-color: #2563eb;
+                border-radius: var(--border-radius-2);
+              "
+            >
+              + Novo Tipo
+            </button>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 1.5rem;
+              margin-top: 1rem;
+            "
+          >
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.2rem 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    font-size: 1.1rem;
+                  "
+                >
+                  Carreta
+                </h3>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.85rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  R$ 850,00
+                </p>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    color: var(--color-info-dark);
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                  "
+                  >edit</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #ef4444; cursor: pointer; font-size: 1.3rem"
+                  >delete</span
+                >
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.2rem 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    font-size: 1.1rem;
+                  "
+                >
+                  Truck
+                </h3>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.85rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  R$ 650,00
+                </p>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    color: var(--color-info-dark);
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                  "
+                  >edit</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #ef4444; cursor: pointer; font-size: 1.3rem"
+                  >delete</span
+                >
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.2rem 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    font-size: 1.1rem;
+                  "
+                >
+                  Toco
+                </h3>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.85rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  R$ 450,00
+                </p>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    color: var(--color-info-dark);
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                  "
+                  >edit</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #ef4444; cursor: pointer; font-size: 1.3rem"
+                  >delete</span
+                >
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.2rem 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    font-size: 1.1rem;
+                  "
+                >
+                  Utilitário
+                </h3>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.85rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  R$ 250,00
+                </p>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    color: var(--color-info-dark);
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                  "
+                  >edit</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #ef4444; cursor: pointer; font-size: 1.3rem"
+                  >delete</span
+                >
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.2rem 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    font-size: 1.1rem;
+                  "
+                >
+                  VUC
+                </h3>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.85rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  R$ 350,00
+                </p>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    color: var(--color-info-dark);
+                    cursor: pointer;
+                    font-size: 1.3rem;
+                  "
+                  >edit</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #ef4444; cursor: pointer; font-size: 1.3rem"
+                  >delete</span
+                >
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+      <section id="view-colaboradores" class="system-view hidden-layout">
+        <main>
+          <div
+            class="movimentacoes-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <button
+                class="menu-desktop-toggle"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  border: none;
+                  outline: none;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.8rem"
+                  >menu</span
+                >
+              </button>
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Colaboradores
+                </h1>
+                <small class="text-muted">0 cadastros</small>
+              </div>
+            </div>
+            <button
+              id="btn-novo-colaborador"
+              class="login-submit-btn"
+              style="
+                width: auto;
+                padding: 0.6rem 1.5rem;
+                margin: 0;
+                background-color: #2563eb;
+                border-radius: var(--border-radius-2);
+              "
+            >
+              + Novo Colaborador
+            </button>
+          </div>
+
+          <div class="movimentacoes-filters" style="margin-bottom: 3rem">
+            <div style="position: relative; width: 100%">
+              <span
+                class="material-symbols-outlined"
+                style="
+                  position: absolute;
+                  left: 1rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: var(--color-info-dark);
+                "
+                >search</span
+              >
+              <input
+                type="text"
+                placeholder="Buscar por nome, CPF ou CNH..."
+                style="
+                  width: 100%;
+                  padding: 0.8rem 1rem 0.8rem 2.8rem;
+                  background: var(--color-white);
+                  border: 1px solid var(--color-light);
+                  border-radius: var(--border-radius-2);
+                  color: var(--color-dark);
+                  outline: none;
+                "
+              />
+            </div>
+          </div>
+
+          <div
+            class="empty-state"
+            style="
+              text-align: center;
+              padding: 5rem 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+            "
+          >
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.5rem;
+                border-radius: 50%;
+                box-shadow: var(--box-shadow);
+                display: inline-flex;
+                color: var(--color-info-dark);
+              "
+            >
+              <span class="material-symbols-outlined" style="font-size: 3rem"
+                >package_2</span
+              >
+            </div>
+            <h2
+              style="
+                font-weight: 700;
+                color: var(--color-dark);
+                margin-top: 1rem;
+                border: none;
+                background: transparent;
+              "
+            >
+              Nenhum registro encontrado
+            </h2>
+            <p
+              style="
+                color: var(--color-info-dark);
+                max-width: 400px;
+                font-size: 0.9rem;
+                margin: 0 auto;
+              "
+            >
+              Nenhum colaborador cadastrado.
+            </p>
+          </div>
+        </main>
+      </section>
+
+      <div id="modalIdVeiculo" class="modal-overlay hidden-layout">
+        <div class="modal-box" style="max-width: 450px">
+          <div class="modal-header">
+            <h2>Novo Tipo de Veículo</h2>
+            <span id="close-modal-id-veiculo" class="material-symbols-outlined"
+              >close</span
+            >
+          </div>
+          <form id="formNovoIdVeiculo">
+            <div class="login-field">
+              <label>Nome *</label>
+              <input type="text" required placeholder="Ex: Carreta, Truck..." />
+            </div>
+            <div class="login-field">
+              <label>Valor Padrão (R$)</label>
+              <input type="text" placeholder="0,00" />
+            </div>
+            <div class="modal-actions">
+              <button
+                type="button"
+                id="btn-cancelar-id-veiculo"
+                class="btn-modal-cancel"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-modal-save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <section id="view-movimentacoes" class="system-view hidden-layout">
+        <main>
+          <div id="movimentacoes-lista-wrapper">
+            <div
+              class="movimentacoes-header"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+              "
+            >
+              <div style="display: flex; align-items: center; gap: 1rem">
+                <button
+                  class="menu-desktop-toggle"
+                  style="
+                    background: transparent;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.8rem"
+                    >menu</span
+                  >
+                </button>
+                <div>
+                  <h1
+                    style="
+                      font-size: 1.8rem;
+                      font-weight: 800;
+                      color: var(--color-dark);
+                      margin: 0;
+                    "
+                  >
+                    Movimentações
+                  </h1>
+                  <small class="text-muted">0 registros</small>
+                </div>
+              </div>
+              <button
+                id="btn-abrir-cadastro-mov"
+                class="login-submit-btn"
+                style="
+                  width: auto;
+                  padding: 0.6rem 1.5rem;
+                  margin: 0;
+                  background-color: #2563eb;
+                  border-radius: var(--border-radius-2);
+                "
+              >
+                + Nova Movimentação
+              </button>
+            </div>
+
+            <div
+              class="movimentacoes-filters"
+              style="display: flex; gap: 1rem; margin-bottom: 3rem"
+            >
+              <div style="position: relative; flex: 1">
+                <span
+                  class="material-symbols-outlined"
+                  style="
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: var(--color-info-dark);
+                  "
+                  >search</span
+                >
+                <input
+                  type="text"
+                  placeholder="Buscar por origem, destino, material, placa..."
+                  style="
+                    width: 100%;
+                    padding: 0.8rem 1rem 0.8rem 2.8rem;
+                    background: var(--color-white);
+                    border: 1px solid var(--color-light);
+                    border-radius: var(--border-radius-2);
+                    color: var(--color-dark);
+                    outline: none;
+                  "
+                />
+              </div>
+
+              <div style="position: relative">
+                <div
+                  id="btn-filtro-status"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 0.8rem 1rem;
+                    background: var(--color-white);
+                    border: 1px solid var(--color-light);
+                    border-radius: var(--border-radius-2);
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    user-select: none;
+                  "
+                >
+                  <span class="material-symbols-outlined">filter_alt</span>
+                  <span id="txt-filtro-atual">Todos</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+
+                <div
+                  id="dropdown-filtro-status"
+                  class="hidden-layout"
+                  style="
+                    position: absolute;
+                    top: calc(100% + 0.5rem);
+                    right: 0;
+                    background: var(--color-white);
+                    border-radius: var(--border-radius-2);
+                    box-shadow: var(--box-shadow);
+                    width: 190px;
+                    z-index: 1000;
+                    overflow: hidden;
+                    padding: 0.4rem 0;
+                  "
+                >
+                  <div
+                    class="status-option option-active"
+                    data-status="Todos"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    Todos
+                    <span
+                      class="material-symbols-outlined"
+                      style="font-size: 1.1rem; color: #2563eb"
+                      >check</span
+                    >
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Aberta"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Aberta
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Em Carregamento"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Em Carregamento
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Em Trânsito"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Em Trânsito
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Entregue"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Entregue
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Finalizada"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Finalizada
+                  </div>
+                  <div
+                    class="status-option"
+                    data-status="Com Ocorrência"
+                    style="
+                      padding: 0.7rem 1.2rem;
+                      cursor: pointer;
+                      color: var(--color-dark);
+                      font-size: 0.9rem;
+                    "
+                  >
+                    Com Ocorrência
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="empty-state"
+              style="
+                text-align: center;
+                padding: 5rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+              "
+            >
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: 1.5rem;
+                  border-radius: 50%;
+                  box-shadow: var(--box-shadow);
+                  display: inline-flex;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span class="material-symbols-outlined" style="font-size: 3rem"
+                  >package_2</span
+                >
+              </div>
+              <h2
+                style="
+                  font-weight: 700;
+                  color: var(--color-dark);
+                  margin-top: 1rem;
+                  border: none;
+                  background: transparent;
+                "
+              >
+                Nenhum registro encontrado
+              </h2>
+              <p
+                style="
+                  color: var(--color-info-dark);
+                  max-width: 400px;
+                  font-size: 0.9rem;
+                  margin: 0 auto;
+                "
+              >
+                Nenhuma movimentação encontrada com os filtros aplicados.
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="movimentacoes-cadastro-wrapper"
+            class="hidden-layout"
+            style="background: transparent; padding: 0.5rem 0"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 2rem;
+              "
+            >
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Nova Movimentação
+                </h1>
+                <p
+                  style="
+                    color: var(--color-info-dark);
+                    font-size: 0.9rem;
+                    margin-top: 0.2rem;
+                  "
+                >
+                  Registrar uma nova movimentação logística
+                </p>
+              </div>
+              <button
+                id="btn-voltar-mov"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  cursor: pointer;
+                  font-size: 1rem;
+                  font-weight: 500;
+                "
+              >
+                <span class="material-symbols-outlined">arrow_back</span> Voltar
+              </button>
+            </div>
+
+            <form
+              id="formNovaMovimentacao"
+              style="display: flex; flex-direction: column; gap: 1.5rem"
+            >
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                "
+              >
+                <h3
+                  style="
+                    font-weight: 700;
+                    margin-bottom: 1.2rem;
+                    color: var(--color-dark);
+                  "
+                >
+                  Evidência Inicial
+                </h3>
+                <div style="display: flex; gap: 1.5rem">
+                  <div
+                    style="
+                      flex: 1;
+                      border: 2px dashed var(--color-info-light);
+                      border-radius: var(--border-radius-2);
+                      padding: 2rem;
+                      text-align: center;
+                      cursor: pointer;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      gap: 0.5rem;
+                      background: var(--color-background);
+                    "
+                  >
+                    <span
+                      class="material-symbols-outlined"
+                      style="color: #2563eb; font-size: 2rem"
+                      >photo_camera</span
+                    >
+                    <b style="color: var(--color-dark)">Tirar foto</b>
+                    <small class="text-muted">Câmera</small>
+                  </div>
+                  <div
+                    style="
+                      flex: 1;
+                      border: 2px dashed var(--color-info-light);
+                      border-radius: var(--border-radius-2);
+                      padding: 2rem;
+                      text-align: center;
+                      cursor: pointer;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      gap: 0.5rem;
+                      background: var(--color-background);
+                    "
+                  >
+                    <span
+                      class="material-symbols-outlined"
+                      style="color: #2563eb; font-size: 2rem"
+                      >upload_file</span
+                    >
+                    <b style="color: var(--color-dark)">Galeria</b>
+                    <small class="text-muted">Selecionar arquivo</small>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.2rem;
+                "
+              >
+                <h3
+                  style="font-weight: 700; color: var(--color-dark); margin: 0"
+                >
+                  Dados do Solicitante
+                </h3>
+                <div style="display: flex; gap: 1rem">
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Tipo de Cliente</label>
+                    <input
+                      type="text"
+                      placeholder="Ex: Interno, Externo, VIP..."
+                    />
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Solicitante</label>
+                    <input type="text" placeholder="Nome do solicitante" />
+                  </div>
+                </div>
+                <div class="login-field" style="margin: 0">
+                  <label>Setor Solicitante</label>
+                  <input
+                    type="text"
+                    placeholder="Ex: Produção, Manutenção, Logística..."
+                  />
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.2rem;
+                "
+              >
+                <h3
+                  style="font-weight: 700; color: var(--color-dark); margin: 0"
+                >
+                  Informações Gerais
+                </h3>
+                <div style="display: flex; gap: 1rem">
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Tipo</label>
+                    <select
+                      style="
+                        width: 100%;
+                        padding: 0.9rem 1.2rem;
+                        background: var(--color-background);
+                        color: var(--color-dark);
+                        border-radius: var(--border-radius-2);
+                        border: 1px solid transparent;
+                        font-family: poppins, sans-serif;
+                      "
+                    >
+                      <option value="Interna">Interna</option>
+                      <option value="Externa">Externa</option>
+                    </select>
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Cliente</label>
+                    <select
+                      style="
+                        width: 100%;
+                        padding: 0.9rem 1.2rem;
+                        background: var(--color-background);
+                        color: var(--color-dark);
+                        border-radius: var(--border-radius-2);
+                        border: 1px solid transparent;
+                        font-family: poppins, sans-serif;
+                      "
+                    >
+                      <option value="">Selecione...</option>
+                    </select>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 1rem">
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Fornecedor</label>
+                    <select
+                      style="
+                        width: 100%;
+                        padding: 0.9rem 1.2rem;
+                        background: var(--color-background);
+                        color: var(--color-dark);
+                        border-radius: var(--border-radius-2);
+                        border: 1px solid transparent;
+                        font-family: poppins, sans-serif;
+                      "
+                    >
+                      <option value="">Selecione...</option>
+                    </select>
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Veículo</label>
+                    <select
+                      style="
+                        width: 100%;
+                        padding: 0.9rem 1.2rem;
+                        background: var(--color-background);
+                        color: var(--color-dark);
+                        border-radius: var(--border-radius-2);
+                        border: 1px solid transparent;
+                        font-family: poppins, sans-serif;
+                      "
+                    >
+                      <option value="">Selecione...</option>
+                    </select>
+                  </div>
+                </div>
+                <div
+                  class="login-field"
+                  style="width: 50%; padding-right: 0.5rem; margin: 0"
+                >
+                  <label>Nº OS/OC</label>
+                  <input type="text" placeholder="Opcional" />
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.2rem;
+                "
+              >
+                <h3
+                  style="font-weight: 700; color: var(--color-dark); margin: 0"
+                >
+                  Transporte
+                </h3>
+                <div style="display: flex; gap: 1rem">
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Origem *</label>
+                    <input type="text" required />
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Destino *</label>
+                    <input type="text" required />
+                  </div>
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: flex-end">
+                  <div class="login-field" style="flex: 2; margin: 0">
+                    <label>Material</label>
+                    <input type="text" />
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Quantidade</label>
+                    <input type="text" />
+                  </div>
+                  <div class="login-field" style="flex: 1; margin: 0">
+                    <label>Unidade</label>
+                    <input type="text" placeholder="ton, pallet..." />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                "
+              >
+                <h3
+                  style="
+                    font-weight: 700;
+                    margin-bottom: 1.2rem;
+                    color: var(--color-dark);
+                  "
+                >
+                  Auxiliares
+                </h3>
+                <div style="display: flex; gap: 0.8rem; flex-wrap: wrap">
+                  <span
+                    style="
+                      border: 1px solid var(--color-info-light);
+                      padding: 0.6rem 1.2rem;
+                      border-radius: 30px;
+                      font-weight: 500;
+                      color: var(--color-dark);
+                      background: var(--color-background);
+                      font-size: 0.85rem;
+                    "
+                    >Rafinha</span
+                  >
+                  <span
+                    style="
+                      border: 1px solid var(--color-info-light);
+                      padding: 0.6rem 1.2rem;
+                      border-radius: 30px;
+                      font-weight: 500;
+                      color: var(--color-dark);
+                      background: var(--color-background);
+                      font-size: 0.85rem;
+                    "
+                    >Lucas Neto</span
+                  >
+                  <span
+                    style="
+                      border: 1px solid var(--color-info-light);
+                      padding: 0.6rem 1.2rem;
+                      border-radius: 30px;
+                      font-weight: 500;
+                      color: var(--color-dark);
+                      background: var(--color-background);
+                      font-size: 0.85rem;
+                    "
+                    >Felipe Luís</span
+                  >
+                </div>
+              </div>
+
+              <div
+                style="
+                  background: var(--color-white);
+                  padding: var(--card-padding);
+                  border-radius: var(--card-border-radius);
+                  box-shadow: var(--box-shadow);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.2rem;
+                "
+              >
+                <h3
+                  style="font-weight: 700; color: var(--color-dark); margin: 0"
+                >
+                  Observações
+                </h3>
+                <div class="login-field" style="margin: 0">
+                  <textarea
+                    placeholder="Notas gerais sobre a movimentação..."
+                    style="
+                      width: 100%;
+                      height: 100px;
+                      padding: 1rem;
+                      background: var(--color-background);
+                      color: var(--color-dark);
+                      border-radius: var(--border-radius-2);
+                      border: 1px solid transparent;
+                      font-family: poppins, sans-serif;
+                      resize: vertical;
+                      outline: none;
+                    "
+                  ></textarea>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  gap: 1rem;
+                  margin-top: 1rem;
+                  margin-bottom: 2rem;
+                "
+              >
+                <button
+                  type="button"
+                  id="btn-cancelar-mov"
+                  class="btn-modal-cancel"
+                  style="padding: 0.8rem 2rem"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  class="btn-modal-save"
+                  style="
+                    background-color: #2563eb;
+                    padding: 0.8rem 2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >save</span
+                  >
+                  Criar Movimentação
+                </button>
+              </div>
+            </form>
+          </div>
+        </main>
+      </section>
+
+      <section id="view-parceiros" class="system-view hidden-layout">
+        <main>
+          <div
+            class="movimentacoes-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <button
+                class="menu-desktop-toggle"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  border: none;
+                  outline: none;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.8rem"
+                  >menu</span
+                >
+              </button>
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Parceiros
+                </h1>
+                <small class="text-muted">6 cadastros</small>
+              </div>
+            </div>
+            <button
+              id="btn-novo-parceiro"
+              class="login-submit-btn"
+              style="
+                width: auto;
+                padding: 0.6rem 1.5rem;
+                margin: 0;
+                background-color: #2563eb;
+                border-radius: var(--border-radius-2);
+              "
+            >
+              + Novo Parceiro
+            </button>
+          </div>
+
+          <div class="movimentacoes-filters" style="margin-bottom: 2rem">
+            <div style="position: relative; width: 100%">
+              <span
+                class="material-symbols-outlined"
+                style="
+                  position: absolute;
+                  left: 1rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: var(--color-info-dark);
+                "
+                >search</span
+              >
+              <input
+                type="text"
+                placeholder="Buscar por nome, fantasia ou CNPJ..."
+                style="
+                  width: 100%;
+                  padding: 0.8rem 1rem 0.8rem 2.8rem;
+                  background: var(--color-white);
+                  border: 1px solid var(--color-light);
+                  border-radius: var(--border-radius-2);
+                  color: var(--color-dark);
+                  outline: none;
+                "
+              />
+            </div>
+          </div>
+
+          <div
+            class="parceiros-lista"
+            style="display: flex; flex-direction: column; gap: 1rem"
+          >
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  DOCE DA DONA LENA
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbfde7;
+                    color: #16a34a;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >FORNECEDOR</span
+                >
+                <span
+                  style="
+                    background: #f3f4f6;
+                    color: #6b7280;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    margin-left: 0.5rem;
+                  "
+                  >Inativo</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">LENA</span> • —
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #9ca3af; cursor: pointer"
+                  >toggle_off</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  PADARIA DO JOSE WALTER
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbfde7;
+                    color: #16a34a;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >FORNECEDOR</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">PADARIA</span> • —
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #16a34a; cursor: pointer"
+                  >toggle_on</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  MAKRO ENG
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbeafe;
+                    color: #2563eb;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >CLIENTE</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">MAKRO</span> • —
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #16a34a; cursor: pointer"
+                  >toggle_on</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  Dennilson
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbeafe;
+                    color: #2563eb;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >Parceiro</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">Polimatec</span>
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #16a34a; cursor: pointer"
+                  >toggle_on</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  Henrique
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbeafe;
+                    color: #2563eb;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >Parceiro</span
+                >
+                <span
+                  style="
+                    background: #f3f4f6;
+                    color: #16a34a;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    margin-left: 0.5rem;
+                  "
+                  >Ativo</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">Polimatec</span>
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #16a34a; cursor: pointer"
+                  >toggle_on</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="parceiro-card"
+              style="
+                background: var(--color-white);
+                padding: 1.2rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <h3
+                  class="p-razao"
+                  style="
+                    font-weight: 700;
+                    color: var(--color-dark);
+                    display: inline-block;
+                    margin-right: 1rem;
+                  "
+                >
+                  DHL
+                </h3>
+                <span
+                  class="p-tipo"
+                  style="
+                    background: #dbeafe;
+                    color: #2563eb;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                  "
+                  >CLIENTE</span
+                >
+                <span
+                  style="
+                    background: #f3f4f6;
+                    color: #16a34a;
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    margin-left: 0.5rem;
+                  "
+                  >Ativo</span
+                >
+                <p
+                  style="
+                    margin-top: 0.4rem;
+                    font-size: 0.85rem;
+                    color: var(--color-info-dark);
+                  "
+                >
+                  <span class="p-fantasia">DHL</span>
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  color: var(--color-info-dark);
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="color: #16a34a; cursor: pointer"
+                  >toggle_on</span
+                >
+                <span
+                  class="material-symbols-outlined btn-editar-parceiro"
+                  style="cursor: pointer"
+                  >edit</span
+                >
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <section id="view-motoristas" class="system-view hidden-layout">
+        <main>
+          <div
+            class="movimentacoes-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <button
+                class="menu-desktop-toggle"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  border: none;
+                  outline: none;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.8rem"
+                  >menu</span
+                >
+              </button>
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Motoristas
+                </h1>
+                <small class="text-muted">0 cadastros</small>
+              </div>
+            </div>
+            <button
+              id="btn-novo-motorista"
+              class="login-submit-btn"
+              style="
+                width: auto;
+                padding: 0.6rem 1.5rem;
+                margin: 0;
+                background-color: #2563eb;
+                border-radius: var(--border-radius-2);
+              "
+            >
+              + Novo Motorista
+            </button>
+          </div>
+
+          <div class="movimentacoes-filters" style="margin-bottom: 3rem">
+            <div style="position: relative; width: 100%">
+              <span
+                class="material-symbols-outlined"
+                style="
+                  position: absolute;
+                  left: 1rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: var(--color-info-dark);
+                "
+                >search</span
+              >
+              <input
+                type="text"
+                placeholder="Buscar por nome, CPF ou CNH..."
+                style="
+                  width: 100%;
+                  padding: 0.8rem 1rem 0.8rem 2.8rem;
+                  background: var(--color-white);
+                  border: 1px solid var(--color-light);
+                  border-radius: var(--border-radius-2);
+                  color: var(--color-dark);
+                  outline: none;
+                "
+              />
+            </div>
+          </div>
+
+          <div
+            class="empty-state"
+            style="
+              text-align: center;
+              padding: 5rem 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+            "
+          >
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.5rem;
+                border-radius: 50%;
+                box-shadow: var(--box-shadow);
+                display: inline-flex;
+                color: var(--color-info-dark);
+              "
+            >
+              <span class="material-symbols-outlined" style="font-size: 3rem"
+                >package_2</span
+              >
+            </div>
+            <h2
+              style="
+                font-weight: 700;
+                color: var(--color-dark);
+                margin-top: 1rem;
+                border: none;
+                background: transparent;
+              "
+            >
+              Nenhum registro encontrado
+            </h2>
+            <p
+              style="
+                color: var(--color-info-dark);
+                max-width: 400px;
+                font-size: 0.9rem;
+                margin: 0 auto;
+              "
+            >
+              Nenhum motorista cadastrado.
+            </p>
+          </div>
+        </main>
+      </section>
+
+      <section id="view-veiculos" class="system-view hidden-layout">
+        <main>
+          <div
+            class="movimentacoes-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <button
+                class="menu-desktop-toggle"
+                style="
+                  background: transparent;
+                  color: var(--color-dark);
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  border: none;
+                  outline: none;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.8rem"
+                  >menu</span
+                >
+              </button>
+              <div>
+                <h1
+                  style="
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: var(--color-dark);
+                    margin: 0;
+                  "
+                >
+                  Veículos
+                </h1>
+                <small class="text-muted">3 cadastros</small>
+              </div>
+            </div>
+            <button
+              id="btn-novo-veiculo"
+              class="login-submit-btn"
+              style="
+                width: auto;
+                padding: 0.6rem 1.5rem;
+                margin: 0;
+                background-color: #2563eb;
+                border-radius: var(--border-radius-2);
+              "
+            >
+              + Novo Veículo
+            </button>
+          </div>
+
+          <div class="movimentacoes-filters" style="margin-bottom: 2rem">
+            <div style="position: relative; width: 100%">
+              <span
+                class="material-symbols-outlined"
+                style="
+                  position: absolute;
+                  left: 1rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: var(--color-info-dark);
+                "
+                >search</span
+              >
+              <input
+                type="text"
+                placeholder="Buscar por placa ou tipo..."
+                style="
+                  width: 100%;
+                  padding: 0.8rem 1rem 0.8rem 2.8rem;
+                  background: var(--color-white);
+                  border: 1px solid var(--color-light);
+                  border-radius: var(--border-radius-2);
+                  color: var(--color-dark);
+                  outline: none;
+                "
+              />
+            </div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+              gap: 1.5rem;
+            "
+          >
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                "
+              >
+                <div>
+                  <h2
+                    style="
+                      font-weight: 800;
+                      color: var(--color-dark);
+                      font-size: 1.4rem;
+                    "
+                  >
+                    STRADA SIMPLES
+                  </h2>
+                  <p
+                    style="
+                      color: var(--color-info-dark);
+                      font-size: 0.9rem;
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    Utilitário <br />
+                    Cap: 2
+                  </p>
+                </div>
+                <span
+                  style="
+                    background: #f3f4f6;
+                    color: #6b7280;
+                    padding: 0.2rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                  "
+                  >Inativo</span
+                >
+              </div>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >check_circle</span
+                  >
+                  Ativar
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >edit</span
+                  >
+                  Editar
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                "
+              >
+                <div>
+                  <h2
+                    style="
+                      font-weight: 800;
+                      color: var(--color-dark);
+                      font-size: 1.4rem;
+                    "
+                  >
+                    OSM5245
+                  </h2>
+                  <p
+                    style="
+                      color: var(--color-info-dark);
+                      font-size: 0.9rem;
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    Truck <br />
+                    Cap: 6
+                  </p>
+                </div>
+                <span
+                  style="
+                    background: #dbfde7;
+                    color: #16a34a;
+                    padding: 0.2rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                  "
+                  >Ativo</span
+                >
+              </div>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >block</span
+                  >
+                  Desativar
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >edit</span
+                  >
+                  Editar
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: var(--color-white);
+                padding: 1.5rem;
+                border-radius: var(--border-radius-3);
+                box-shadow: var(--box-shadow);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                "
+              >
+                <div>
+                  <h2
+                    style="
+                      font-weight: 800;
+                      color: var(--color-dark);
+                      font-size: 1.4rem;
+                    "
+                  >
+                    XYZ9F87
+                  </h2>
+                  <p
+                    style="
+                      color: var(--color-info-dark);
+                      font-size: 0.9rem;
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    Truck <br />
+                    Cap: 15
+                  </p>
+                </div>
+                <span
+                  style="
+                    background: #f3f4f6;
+                    color: #6b7280;
+                    padding: 0.2rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                  "
+                  >Inativo</span
+                >
+              </div>
+              <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >check_circle</span
+                  >
+                  Ativar
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: var(--color-dark);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-size: 1.2rem"
+                    >edit</span
+                  >
+                  Editar
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <div id="modalParceiro" class="modal-overlay hidden-layout">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h2 id="modal-titulo">Novo Parceiro</h2>
+            <span id="close-modal-btn" class="material-symbols-outlined"
+              >close</span
+            >
+          </div>
+
+          <form id="formNovoParceiro">
+            <div class="login-field">
+              <label>Tipo</label>
+              <select
+                id="modalInputTipo"
+                style="
+                  width: 100%;
+                  padding: 0.9rem 1.2rem;
+                  background: var(--color-background);
+                  color: var(--color-dark);
+                  border-radius: var(--border-radius-2);
+                  border: 1px solid transparent;
+                  font-family: poppins, sans-serif;
+                "
+              >
+                <option value="Cliente">Cliente</option>
+                <option value="Fornecedor">Fornecedor</option>
+              </select>
+            </div>
+
+            <div class="login-field">
+              <label>Razão Social *</label>
+              <input
+                type="text"
+                id="modalInputRazao"
+                required
+                placeholder="Digite a razão social"
+              />
+            </div>
+
+            <div class="login-field">
+              <label>Nome Fantasia</label>
+              <input
+                type="text"
+                id="modalInputFantasia"
+                placeholder="Digite o nome fantasia"
+              />
+            </div>
+
+            <div class="login-field">
+              <label>CNPJ</label>
+              <input type="text" placeholder="00.000.000/0000-00" />
+            </div>
+
+            <div class="login-field">
+              <label>Endereço</label>
+              <input type="text" placeholder="Rua, Número, Bairro, Cidade" />
+            </div>
+
+            <div class="modal-actions">
+              <button
+                type="button"
+                id="btn-cancelar-modal"
+                class="btn-modal-cancel"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-modal-save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="modalMotorista" class="modal-overlay hidden-layout">
+        <div class="modal-box" style="max-width: 550px">
+          <div class="modal-header">
+            <h2>Novo Motorista</h2>
+            <span
+              id="close-modal-motorista-btn"
+              class="material-symbols-outlined"
+              >close</span
+            >
+          </div>
+
+          <form id="formNovoMotorista">
+            <div class="login-field">
+              <label>Nome Completo *</label>
+              <input type="text" required placeholder="João da Silva" />
+            </div>
+
+            <div class="login-field">
+              <label>CPF *</label>
+              <input type="text" required placeholder="123.456.789-00" />
+            </div>
+
+            <div style="display: flex; gap: 1rem; width: 100%">
+              <div class="login-field" style="flex: 1">
+                <label>CNH</label>
+                <input type="text" placeholder="1234567890" />
+              </div>
+              <div class="login-field" style="flex: 1">
+                <label>Categoria</label>
+                <select
+                  style="
+                    width: 100%;
+                    padding: 0.9rem 1.2rem;
+                    background: var(--color-background);
+                    color: var(--color-dark);
+                    border-radius: var(--border-radius-2);
+                    border: 1px solid transparent;
+                    font-family: poppins, sans-serif;
+                    height: 100%;
+                  "
+                >
+                  <option value="A">A - Moto</option>
+                  <option value="B">B - Carro</option>
+                  <option value="C">C - Caminhão Leve</option>
+                  <option value="D" selected>D - Ônibus</option>
+                  <option value="E">E - Carreta</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="login-field">
+              <label>Validade CNH</label>
+              <input
+                type="date"
+                style="font-family: poppins, sans-serif; cursor: pointer"
+              />
+            </div>
+
+            <div class="login-field">
+              <label>Telefone</label>
+              <input type="text" placeholder="(11) 98765-4321" />
+            </div>
+
+            <div class="login-field">
+              <label>Endereço</label>
+              <input type="text" placeholder="Rua, número, bairro..." />
+            </div>
+
+            <div class="modal-actions">
+              <button
+                type="button"
+                id="btn-cancelar-motorista"
+                class="btn-modal-cancel"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-modal-save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="modalColaborador" class="modal-overlay hidden-layout">
+        <div class="modal-box" style="max-width: 550px">
+          <div class="modal-header">
+            <h2>Novo Colaborador</h2>
+            <span
+              id="close-modal-colaborador-btn"
+              class="material-symbols-outlined"
+              style="cursor: pointer"
+              >close</span
+            >
+          </div>
+
+          <form id="formNovoColaborador">
+            <div class="login-field">
+              <label>Nome Completo *</label>
+              <input type="text" required placeholder="João da Silva" />
+            </div>
+
+            <div class="login-field">
+              <label>CPF *</label>
+              <input type="text" required placeholder="123.456.789-00" />
+            </div>
+
+            <div style="display: flex; gap: 1rem; width: 100%">
+              <div class="login-field" style="flex: 1">
+                <label>CNH</label>
+                <input type="text" placeholder="1234567890" />
+              </div>
+              <div class="login-field" style="flex: 1">
+                <label>Categoria</label>
+                <select
+                  style="
+                    width: 100%;
+                    padding: 0.9rem 1.2rem;
+                    background: var(--color-background);
+                    color: var(--color-dark);
+                    border-radius: var(--border-radius-2);
+                    border: 1px solid transparent;
+                    font-family: poppins, sans-serif;
+                    height: 100%;
+                  "
+                >
+                  <option value="A">A - Moto</option>
+                  <option value="B">B - Carro</option>
+                  <option value="C">C - Caminhão Leve</option>
+                  <option value="D" selected>D - Ônibus</option>
+                  <option value="E">E - Carreta</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="login-field">
+              <label>Validade CNH</label>
+              <input
+                type="date"
+                style="font-family: poppins, sans-serif; cursor: pointer"
+              />
+            </div>
+
+            <div class="login-field">
+              <label>Telefone</label>
+              <input type="text" placeholder="(11) 98765-4321" />
+            </div>
+
+            <div class="login-field">
+              <label>Endereço</label>
+              <input type="text" placeholder="Rua, número, bairro..." />
+            </div>
+
+            <div class="modal-actions">
+              <button
+                type="button"
+                id="btn-cancelar-colaborador"
+                class="btn-modal-cancel"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-modal-save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="modalVeiculo" class="modal-overlay hidden-layout">
+        <div class="modal-box" style="max-width: 500px">
+          <div class="modal-header">
+            <h2>Novo Veículo</h2>
+            <span id="close-modal-veiculo" class="material-symbols-outlined"
+              >close</span
+            >
+          </div>
+          <form id="formNovoVeiculo">
+            <div class="login-field">
+              <label>Placa *</label>
+              <input type="text" required placeholder="ABC1D23" />
+            </div>
+            <div class="login-field">
+              <label>Tipo de Veículo *</label>
+              <select
+                required
+                style="
+                  width: 100%;
+                  padding: 0.9rem 1.2rem;
+                  background: var(--color-background);
+                  color: var(--color-dark);
+                  border-radius: var(--border-radius-2);
+                  border: 1px solid transparent;
+                  font-family: poppins, sans-serif;
+                "
+              >
+                <option value="">Selecione...</option>
+                <option value="Utilitário">Utilitário</option>
+                <option value="Truck">Truck</option>
+                <option value="Carreta">Carreta</option>
+              </select>
+            </div>
+            <div class="login-field">
+              <label>Capacidade (ton)</label>
+              <input type="number" placeholder="Ex: 5" />
+            </div>
+            <div class="modal-actions">
+              <button
+                type="button"
+                id="btn-cancelar-veiculo"
+                class="btn-modal-cancel"
+              >
+                Cancelar
+              </button>
+              <button type="submit" class="btn-modal-save">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="top">
+          <div class="theme-toggler">
+            <span class="material-symbols-outlined active">wb_sunny</span>
+            <span class="material-symbols-outlined">dark_mode</span>
+          </div>
+
+          <div class="profile">
+            <div class="info">
+              <p>Olá <b>Carlos</b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+              <a href="#"
+                ><img src="./imagens/carlos.png" alt="Carlos Profile"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="recent-updates">
+          <h2>Notificações</h2>
+          <div class="updates">
+            <div class="update">
+              <div class="profile-photo">
+                <a href="#"
+                  ><img src="./imagens/Dennilson.png" alt="Dennilson"
+                /></a>
+              </div>
+              <div class="message">
+                <p>
+                  <b> Dennilson</b> Bom dia pessoal, porque tem tantos processos
+                  pendente ?
+                </p>
+                <small class="text-muted"> Agora</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo">
+                <a href="#"><img src="./imagens/david.png" alt="David" /></a>
+              </div>
+              <div class="message">
+                <p>
+                  <b>David Alexandre</b> Alguém sabe me informar porque as
+                  dispesas já está acima de 4 mil ?
+                </p>
+                <small class="text-muted"> Há 2 minutos</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo">
+                <a href="#"
+                  ><img src="./imagens/Nailton.png" alt="Nailton"
+                /></a>
+              </div>
+              <div class="message">
+                <p>
+                  <b>Nailton</b> Por gentiliza Carlos, verifica na operação
+                  logística o motivo do atraso
+                </p>
+                <small class="text-muted"> Há 5 minutos</small>
+              </div>
+            </div>
+
+            <div class="sales-analytics">
+              <h2>Em processamento</h2>
+              <div class="item online">
+                <div class="icon">
+                  <span class="material-symbols-outlined"
+                    >delivery_truck_speed</span
+                  >
+                </div>
+                <div class="right">
+                  <div class="info">
+                    <h3>Pedidos em rota</h3>
+                    <small class="text-muted">Últimas 24 hours</small>
+                  </div>
+                  <h5 class="sucess">+45%</h5>
+                  <h3>55</h3>
+                </div>
+              </div>
+
+              <div class="item offline">
+                <div class="icon">
+                  <span class="material-symbols-outlined">box_add</span>
+                </div>
+                <div class="right">
+                  <div class="info">
+                    <h3>Em separação</h3>
+                    <small class="text-muted">Últimas 24 hours</small>
+                  </div>
+                  <h5 class="sucess">+20%</h5>
+                  <h3>23</h3>
+                </div>
+              </div>
+
+              <div class="item customers">
+                <div class="icon">
+                  <span class="material-symbols-outlined">check_box</span>
+                </div>
+                <div class="right">
+                  <div class="info">
+                    <h3>Total de entregas</h3>
+                    <small class="text-muted">Últimas 24 hours</small>
+                  </div>
+                  <h5 class="sucess">+89%</h5>
+                  <h3>105</h3>
+                </div>
+              </div>
+
+              <div class="item add-product">
+                <span class="material-symbols-outlined">add</span>
+                <h3>
+                  <a href="#"><span class="primary">Adicionar sessões</span></a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
