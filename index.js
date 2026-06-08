@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const pass = document.getElementById("inputPass").value;
 
       // Credenciais exclusivas para a reunião mantidas por você
-      if (user === "carlos.xavier" && pass === "Cm03102020") {
+      if (user === "Polimatec" && pass === "Poli@2026") {
         const loginOverlay = document.getElementById("loginOverlay");
 
         if (loginOverlay) loginOverlay.classList.add("hidden-layout");
